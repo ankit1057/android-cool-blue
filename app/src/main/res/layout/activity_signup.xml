@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context="com.swiftly.andro.LoginActivity">
+    tools:context="com.swiftly.andro.SignupActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/appTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/signupUsernameTxt"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginEnd="8dp"
@@ -40,10 +40,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/appTxt" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/signupEmailTxt"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/custom_edittext"
+        android:drawableStart="@drawable/ic_action_email"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:textColorHint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signupUsernameTxt" />
+
+    <EditText
+        android:id="@+id/signupPasswordTxt"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
@@ -56,39 +76,22 @@
         android:paddingEnd="10dp"
         android:paddingStart="10dp"
         android:textColorHint="@color/colorPrimary"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="@+id/signupEmailTxt"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintStart_toStartOf="@+id/signupEmailTxt"
+        app:layout_constraintTop_toBottomOf="@+id/signupEmailTxt" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/signupSignupBtn"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/custom_button_border1"
-        android:text="SIGN IN"
+        android:text="SIGN UP"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/signupPasswordTxt" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/custom_button_border2"
-        android:onClick="createAccountPressed"
-        android:paddingTop="10dp"
-        android:text="Create New Account"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 </android.support.constraint.ConstraintLayout>
